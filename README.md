@@ -25,6 +25,8 @@ We provide the PyTorch implementation for [Digging out Discrimination Informatio
 
 
 ### Download and preprocess the data
+Pretrained UpDn can be found [here](https://github.com/Zhiquan-Wen/DDG/releases/download/Pre-trained-UpDn/UpDn.pth). Pre-trained PPDB model can be downloaded from [here](http://paraphrase.org/#/download).
+Preprocessed features can be found ([Positive Images](https://github.com/Zhiquan-Wen/DDG/releases/download/Positive-Images/q_id_with_sorted_object_index.npy) and [Positive questions](https://github.com/Zhiquan-Wen/DDG/releases/download/Positive-Questions/vqacp_v2_train_aug_questions_second.json))
 
 ```
 cd data 
@@ -33,6 +35,9 @@ python preprocess_features.py --input_tsv_folder features.tsv --output_h5 featur
 python feature_preprocess.py --input_h5 features.h5 --output_path trainval 
 python create_dictionary.py --dataroot vqacp2/
 python preprocess_text.py --dataroot vqacp2/ --version v2
+python obtain_q_positive_samples.py --input vqacp2/ --output vqacp2/ 
+python select_q_positive_samples.py --input vqacp2/ --output vqacp2/
+python obtain_topk_object_index.py --dataroot vqacp2/ --checkpoint_path <pretrained_UpDn_dir>  --outpu vqacp2/q_id_with_sorted_object_index.npy
 cd ..
 ```
 
@@ -42,9 +47,9 @@ cd ..
 CUDA_VISIBLE_DEVICES=0 python main.py --dataroot data/vqacp2/ --img_root data/coco/trainval_features --output saved_models_cp2/ --self_loss_weight 3 --self_loss_q 0.7 --kl_loss_weight 1.0 --dis_loss_weight 0.05 --pos_k 10
 ``` 
 
-* Train the model with 80% of the original training set
+* Train the model with 20% of the original training set
 ```
-CUDA_VISIBLE_DEVICES=0 python main.py --dataroot data/vqacp2/ --img_root data/coco/trainval_features --output saved_models_cp2/ --self_loss_weight 3 --self_loss_q 0.7 --kl_loss_weight 1.0 --dis_loss_weight 0.05 --pos_k 10 --ratio 0.8 
+CUDA_VISIBLE_DEVICES=0 python main.py --dataroot data/vqacp2/ --img_root data/coco/trainval_features --output saved_models_cp2/ --self_loss_weight 3 --self_loss_q 0.7 --kl_loss_weight 1.0 --dis_loss_weight 0.05 --pos_k 10 --ratio 0.2 
 ```
 
 ### Evaluation
@@ -84,7 +89,7 @@ docker tag registry.cn-shenzhen.aliyuncs.com/wenzhiquan/debias_vqa:v1 zhiquanwen
 docker run --gpus all -it --ipc=host --network=host --shm-size 32g -v /host/path/to/data:/xxx:ro zhiquanwen/debias_vqa:v1
 ```
 
-3. **Running**: refer to `Download and preprocess the data`, `Training` and `Evaluation` steps in `Getting Started`.
+3. **Running**: refer to `Training` and `Evaluation` steps in `Getting Started`.
 
 
 ## Reference
@@ -101,8 +106,3 @@ If you found this code is useful, please cite the following paper:
   year = {2023}
 }
 ```
-
-## Acknowledgements
-This repository contains code modified from [SSL-VQA](https://github.com/CrossmodalGroup/SSL-VQA), thank you very much!
-
-Besides, we thank Yaofo Chen for providing [MIO](https://github.com/chenyaofo/mio) library to accelerate the data loading.
