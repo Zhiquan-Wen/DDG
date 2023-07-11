@@ -1,5 +1,5 @@
 # DDG
-We provide the PyTorch implementation for [Digging out Discrimination Information from Generated Samples for Robust Visual Question Answering] (ACL 2023 Findings).
+We provide the PyTorch implementation for [Digging out Discrimination Information from Generated Samples for Robust Visual Question Answering](https://aclanthology.org/2023.findings-acl.432.pdf) (ACL 2023 Findings).
 
 <p align="center">
 <img src="framework.png" alt="D-VQA" width="100%" align=center />
