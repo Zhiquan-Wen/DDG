@@ -71,6 +71,8 @@ class Model(nn.Module):
             ensemble_logits = (logits + logits_q + logits_v) / 3
             
             out['ensemble_logit'] = ensemble_logits
+            out['logit_pos_q'] = logits_q
+            out['logit_pos_v'] = logits_v
             out['joint_pos_q'] = joint_main_q
             out['joint_pos_v'] = joint_main_v
             out['joint_fea'] = joint_main

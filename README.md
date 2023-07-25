@@ -44,12 +44,12 @@ cd ..
 ### Training
 * Train our model
 ```
-CUDA_VISIBLE_DEVICES=0 python main.py --dataroot data/vqacp2/ --img_root data/coco/trainval_features --output saved_models_cp2/ --self_loss_weight 3 --self_loss_q 0.7 --kl_loss_weight 1.0 --dis_loss_weight 0.05 --pos_k 10
+CUDA_VISIBLE_DEVICES=0 python main.py --dataroot data/vqacp2/ --img_root data/coco/trainval_features --output saved_models_cp2/ --self_loss_weight 3 --self_loss_weight_q 0.7 --kl_loss_weight 1.0 --dis_loss_weight 0.05 --pos_k 10
 ``` 
 
 * Train the model with 20% of the original training set
 ```
-CUDA_VISIBLE_DEVICES=0 python main.py --dataroot data/vqacp2/ --img_root data/coco/trainval_features --output saved_models_cp2/ --self_loss_weight 3 --self_loss_q 0.7 --kl_loss_weight 1.0 --dis_loss_weight 0.05 --pos_k 10 --ratio 0.2 
+CUDA_VISIBLE_DEVICES=0 python main.py --dataroot data/vqacp2/ --img_root data/coco/trainval_features --output saved_models_cp2/ --self_loss_weight 3 --self_loss_weight_q 0.7 --kl_loss_weight 1.0 --dis_loss_weight 0.05 --pos_k 10 --ratio 0.2 
 ```
 
 ### Evaluation

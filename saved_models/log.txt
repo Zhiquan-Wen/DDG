@@ -1,0 +1,143 @@
+Collect envs from system:
+PyTorch version: 1.1.0
+Is debug build: No
+CUDA used to build PyTorch: 9.0.176
+
+OS: Ubuntu 20.04.4 LTS
+GCC version: (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0
+CMake version: version 3.16.3
+
+Python version: 3.6
+Is CUDA available: Yes
+CUDA runtime version: Could not collect
+GPU models and configuration: 
+GPU 0: NVIDIA TITAN Xp
+GPU 1: NVIDIA TITAN Xp
+GPU 2: NVIDIA TITAN Xp
+GPU 3: NVIDIA TITAN Xp
+GPU 4: NVIDIA TITAN Xp
+GPU 5: NVIDIA TITAN Xp
+GPU 6: NVIDIA TITAN Xp
+GPU 7: NVIDIA TITAN Xp
+
+Nvidia driver version: 470.103.01
+cuDNN version: Could not collect
+
+Versions of relevant libraries:
+[pip3] numpy==1.19.5
+[pip3] torch==1.7.1
+[pip3] torchaudio==0.7.2
+[pip3] torchvision==0.8.2
+[conda] torch                     1.1.0                     <pip>
+[conda] torchvision               0.3.0                     <pip>
+Collect pip packages list from system:
+aiohttp==3.7.4
+asciitree==0.3.3
+async-timeout==3.0.1
+attrs==20.3.0
+backcall==0.2.0
+blessings==1.7
+blis==0.7.4
+boto==2.49.0
+boto3==1.17.47
+botocore==1.20.47
+brotlipy==0.7.0
+bz2file==0.98
+cached-property==1.5.2
+cachetools==4.2.1
+catalogue==2.0.1
+certifi==2020.12.5
+cffi==1.14.5
+chardet==4.0.0
+click==7.1.2
+colorama==0.4.4
+contextvars==2.4
+cryptography==3.4.7
+cymem==2.0.5
+dataclasses==0.8
+decorator==4.4.2
+docopt==0.6.2
+en-core-web-lg==3.0.0
+en-core-web-sm==3.0.0
+fasteners==0.16
+google-api-core==1.26.2
+google-auth==1.28.0
+google-cloud-core==1.5.0
+google-cloud-storage==1.19.0
+google-crc32c==1.1.2
+google-resumable-media==1.2.0
+googleapis-common-protos==1.53.0
+gpustat==0.6.0
+grpcio==1.37.0
+h5py==3.1.0
+idna==2.10
+idna-ssl==1.1.0
+immutables==0.15
+importlib-metadata==3.10.0
+ipython==7.16.1
+ipython_genutils==0.2.0
+jedi==0.17.2
+Jinja2==2.11.3
+jmespath==0.10.0
+line-profiler==2.1.2
+MarkupSafe==1.1.1
+memory-profiler==0.58.0
+multidict==5.1.0
+murmurhash==1.0.5
+numcodecs==0.7.3
+numpy==1.19.5
+nvidia-ml-py3==7.352.0
+packaging==20.9
+parso==0.7.0
+pathy==0.4.0
+pexpect==4.8.0
+pickleshare==0.7.5
+Pillow==8.1.2
+pip==21.3.1
+pipreqs==0.4.11
+preshed==3.0.5
+progressbar==2.5
+prompt-toolkit==3.0.8
+protobuf==3.15.7
+psutil==5.8.0
+ptyprocess==0.6.0
+pyasn1==0.4.8
+pyasn1-modules==0.2.7
+pycparser==2.20
+pydantic==1.7.3
+Pygments==2.7.1
+pyOpenSSL==20.0.1
+pyparsing==2.4.7
+PySocks==1.7.1
+python-dateutil==2.8.1
+pytz==2021.1
+requests==2.25.1
+rsa==4.7.2
+s3transfer==0.3.6
+setuptools==49.6.0.post20210108
+shellingham==1.4.0
+six==1.15.0
+smart-open==2.2.1
+spacy==3.0.5
+spacy-legacy==3.0.2
+srsly==2.4.0
+tensorboardX==2.2
+thinc==8.0.2
+torch==1.7.1
+torchaudio==0.7.2
+torchvision==0.8.2
+tqdm==4.60.0
+traitlets==4.3.3
+typer==0.3.2
+typing-extensions==3.7.4.3
+urllib3==1.26.4
+wasabi==0.8.2
+wcwidth==0.2.5
+wheel==0.29.0
+yarg==0.1.9
+yarl==1.6.3
+zarr==2.7.0
+zipp==3.4.1
+------------------------------
+
+nParams=	36287388
